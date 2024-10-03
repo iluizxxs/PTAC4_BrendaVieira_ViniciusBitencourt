@@ -1,11 +1,17 @@
 import Link from 'next/link';
 import styles from './page.module.css';
+import { useState } from 'react';
+import PerfilUsuario from "../app/interface/usuario"
+import Usuario from '../app/interface/usuario';
 
-export default function Home(){
-  return (
-    <div className={styles.container}>
-      <h1 className={styles.title}>Bem-vindo à Página Inicial!</h1><br/>
-      <Link href="/login">LOGIN</Link>
+const  PaginaPerfil = () =>{
+  const [usuario, setUsuario] = useState<Usuario>
+  setUsuario({nome: 'Jose', idade: 23})
+  return(
+    <div>
+      <h1>Pagina Perfil</h1>
     </div>
-  );
-};
+  )
+}
+
+export default PaginaPerfil;
