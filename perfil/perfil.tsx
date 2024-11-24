@@ -1,7 +1,7 @@
-import PerfilUsuario from "../interface/usuario";
+import PerfilUsuario from "../src/app/interface/usuario";
 
 const PaginaPerfil = () => {
-    const usuario ={
+    const usuario = {
         nome: 'José Lima',
         idade: 20,
         email: 'josé.lima@gmail.com'
@@ -9,8 +9,8 @@ const PaginaPerfil = () => {
 
     return (
     <div>
-        <h1>Página Perfil</h1>
-        <PerfilUsuario usuario={usuario}/>
+        <h1>Perfil</h1>
+        <PerfilUsuario usuario ={usuario} />
     </div>
     )
 }
