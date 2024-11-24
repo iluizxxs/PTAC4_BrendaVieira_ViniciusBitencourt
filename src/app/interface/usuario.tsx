@@ -1,7 +1,11 @@
+export default Usuario;
+
 interface Usuario {
+    id?: number;
     nome: string;
-    idade: number;
-    email?: string; 
+    email?: string;
+    password: string;
+    tipo: string; 
 }
 
 /*const PerfilUsuario: React.FC <{usuario: Usuario}>
@@ -12,7 +16,5 @@ interface Usuario {
         <p>{usuario.idade}</p>
   { usuario.email && <p>Email:{usuario.email}</p>}
     </div>
-   )
+   );
 }*/
- 
-export default Usuario;
