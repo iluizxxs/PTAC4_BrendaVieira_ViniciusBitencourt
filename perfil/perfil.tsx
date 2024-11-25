@@ -1,18 +1,26 @@
-import PerfilUsuario from "../src/app/interface/usuario";
+"use client";
+import Usuario from '../src/app/interface/usuario';
+import PerfilUsuario from '../src/app/interface/usuario';
+import { useEffect, useState } from 'react';
 
-const PaginaPerfil = () => {
-    const usuario = {
-        nome: 'José Lima',
-        idade: 20,
-        email: 'josé.lima@gmail.com'
-    }
+const Perfil = () => {
+    const [usuario, setUsuario] = useState <Usuario | undefined> ();
+    //useEffect(()=>{
+       // setUsuario({nome:'Brenda'});
 
-    return (
-    <div>
-        <h1>Perfil</h1>
-        <PerfilUsuario usuario ={usuario} />
-    </div>
-    )
-}
- 
-export default PaginaPerfil;
+    //}, []);
+
+   // {
+       // nome: 'Brenda Vieira',
+       // idade: 20,
+       // email: 'brenda@gmail.com'
+  //  }
+
+    return(
+        <div>
+            <h1>Perfil</h1>
+            {/*<PerfilUsuario usuario = {usuario} />*/}
+        </div>
+    );
+};
+export default Perfil;
