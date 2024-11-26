@@ -3,7 +3,6 @@ import styles from "../app/css/home.module.css"
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { parseCookies } from 'nookies';
-import Link from "next/link";
 
 export default function Home(){
   

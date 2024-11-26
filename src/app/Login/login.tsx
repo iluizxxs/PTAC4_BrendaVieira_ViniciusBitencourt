@@ -59,29 +59,33 @@ export default function Login(){
     }
 
   return (
-    <div>
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
+    <div className="loginContainer">
+      <h1 className="loginTitle">Login</h1>
+      <form onSubmit={handleSubmit} className="loginForm">
+        <div className="formGroup">
           <label htmlFor="email">E-mail:</label>
           <input
             type="email"
             id="email"
             value={email}
-            onChange={(e) => setEmail(e.target.value)} />
+            onChange={(e) => setEmail(e.target.value)}
+            className="formInput"
+          />
         </div>
-        <div>
+        <div className="formGroup">
           <label htmlFor="password">Senha:</label>
           <input
             type="password"
             id="password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)} /> 
+            onChange={(e) => setPassword(e.target.value)}
+            className="formInput"
+          />
         </div>
-        <button type="submit">Login</button>
-        {error && <p style={{ color: 'red' }}>{error}</p>}
+        <button type="submit" className="submitButton">Login</button>
+        {error && <p className="errorMessage">{error}</p>}
       </form>
-      <a href='/Cadastro'>Se Cadastre</a>
+      <a href="/Cadastro" className="signupLink">Se Cadastre</a>
     </div>
   );
-};
+}

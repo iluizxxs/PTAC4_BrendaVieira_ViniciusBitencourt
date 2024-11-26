@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import { ApiURL } from "../config";
 import { setCookie } from 'nookies';
 import Usuario from '../interface/usuario';
+import Styles from '../css/cadastro.module.css';
 
 interface ResponseSignin{
   erro: boolean,
@@ -80,47 +81,48 @@ export default function Cadastro() {
       }
 
   return (
-    <div>
-      <h1>Cadastro</h1>
-      <form onSubmit={handleSubmit}>
-      <div>
+    <div className="cadastroContainer">
+      <h1 className="cadastroTitle">Cadastro</h1>
+      <form onSubmit={handleSubmit} className="cadastroForm">
+        <div className="formGroup">
           <label htmlFor="nome">Nome:</label>
           <input
-            type="nome"
+            type="text"
             id="nome"
             value={usuario.nome}
-            onChange={(e) => alterarNome(e.target.value)} 
+            onChange={(e) => alterarNome(e.target.value)}
+            className="formInput"
             required
-            />
+          />
         </div>
-
-        <div>
+        <div className="formGroup">
           <label htmlFor="email">E-mail:</label>
           <input
             type="email"
             id="email"
             value={usuario.email}
-            onChange={(e) => alterarEmail(e.target.value)} 
+            onChange={(e) => alterarEmail(e.target.value)}
+            className="formInput"
             required
-            />
+          />
         </div>
-
-        <div>
+        <div className="formGroup">
           <label htmlFor="password">Senha:</label>
           <input
             type="password"
             id="password"
             value={usuario.password}
-            onChange={(e) => alterarPassword(e.target.value)} 
+            onChange={(e) => alterarPassword(e.target.value)}
+            className="formInput"
             required
-            /> 
+          />
         </div>
-
-        <button type="submit">Cadastrar</button>
-        {error && <p style={{ color: 'red' }}>{error}</p>}
+        <button type="submit" className="submitButton">Cadastrar</button>
+        {error && <p className="errorMessage">{error}</p>}
       </form>
-      <p>Possui conta?</p>
-      <a href='/Login'>Login</a>
+      <p className="loginPrompt">
+        Já possui conta? <a href="/Login" className="loginLink">Login</a>
+      </p>
     </div>
   );
-};
+}
