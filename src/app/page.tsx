@@ -14,6 +14,8 @@ const router = useRouter();
     }
 }, []);
 
+//estilo//
+
   return (
     <div className={styles.container}>
       <header className={styles.header}>
@@ -28,6 +30,7 @@ const router = useRouter();
           <a href="#contact" className={styles.navLink}>Contato</a>
           <a href="/Login" className={styles.loginLink}>Login</a>
         </nav>
+
       </header>
       <main className={styles.main}>
         <section id="about" className={styles.section}>
@@ -45,6 +48,7 @@ const router = useRouter();
             </p>
           </div>
         </section>
+
         <section id="menu" className={styles.section}>
           <h2 className={styles.sectionTitle}>Nosso Menu</h2>
           <div className={styles.menuGrid}>
@@ -134,12 +138,14 @@ const router = useRouter();
             </div>
           </div>
         </section>
+
         <section id="contact" className={styles.section}>
           <h2 className={styles.sectionTitle}>Contato</h2>
           <p className={styles.text}>Telefone: (99) 99999-9999</p>
           <p className={styles.text}>Endereço: Rua Doce, 123</p>
         </section>
       </main>
+      
       <footer className={styles.footer}>
         <p className={styles.footerText}>
           © 2024 Confeitaria Vieira. Todos os direitos reservados.

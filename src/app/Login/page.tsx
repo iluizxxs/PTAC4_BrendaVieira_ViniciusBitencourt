@@ -1,4 +1,5 @@
 'use client'
+import styles from "../css/login.module.css"
 import { useState, FormEvent, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { ApiURL } from "../config";
@@ -59,33 +60,39 @@ export default function Login(){
     }
 
   return (
-    <div className="loginContainer">
-      <h1 className="loginTitle">Login</h1>
-      <form onSubmit={handleSubmit} className="loginForm">
-        <div className="formGroup">
-          <label htmlFor="email">E-mail:</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="formInput"
-          />
-        </div>
-        <div className="formGroup">
-          <label htmlFor="password">Senha:</label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className="formInput"
-          />
-        </div>
-        <button type="submit" className="submitButton">Login</button>
-        {error && <p className="errorMessage">{error}</p>}
-      </form>
-      <a href="/Cadastro" className="signupLink">Se Cadastre</a>
-    </div>
-  );
+    <div className={styles.loginContainer}>
+    <h1 className={styles.loginTitle}>Bem-vindo à Confeitaria!</h1>
+    <form onSubmit={handleSubmit} className={styles.loginForm}>
+      <div className={styles.formGroup}>
+        <label htmlFor="email">E-mail:</label>
+        <input
+          type="email"
+          id="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className={styles.formInput}
+          placeholder="Digite seu e-mail"
+        />
+      </div>
+      <div className={styles.formGroup}>
+        <label htmlFor="password">Senha:</label>
+        <input
+          type="password"
+          id="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className={styles.formInput}
+          placeholder="Digite sua senha"
+        />
+      </div>
+      <button type="submit" className={styles.submitButton}>
+        Entrar
+      </button>
+      {error && <p className={styles.errorMessage}>{error}</p>}
+    </form>
+    <a href="/Cadastro" className={styles.signupLink}>
+      Ainda não tem conta? Cadastre-se
+    </a>
+  </div>
+);
 }
