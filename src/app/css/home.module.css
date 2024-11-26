@@ -1,14 +1,130 @@
+
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100px;
-    background-color: #B19CD9;
-    color: white;
-    text-align: center;
-  }
-  
-  .title {
-    font-size: 1;
-    font-weight: bold;
-  }
+  font-family: 'Poppins', sans-serif;
+  color: #ff6d85;
+  background: #ffedf0;
+  line-height: 1.6;
+}
+
+.header {
+  position: relative;
+  text-align: center;
+  color:#ff6d85;
+}
+
+.headerImage {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  filter: brightness(0.8);
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  background: rgba(247, 245, 245, 0.995);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.navLink {
+  background: #ff6d85;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.navLink:hover {
+  color: #f33a6a;
+}
+
+.loginLink {
+  background: #ff6d85;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.loginLink:hover {
+  background: #f33a6a;
+  cursor: pointer;
+}
+
+.aboutContent {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.aboutImage {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  filter: brightness(0.8);
+}
+
+.text {
+  color: black;
+  text-align: center;
+  max-width: 1000px;
+}
+
+/* Menu */
+.menuGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.menuItem {
+  text-align: center;
+  background: #ffe6e6;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.menuItem:hover {
+  transform: translateY(-5px);
+}
+
+.menuImage {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+
+.footer {
+  background: #ff6d85;
+  text-align: center;
+  padding: 1rem;
+}
+
+.footerText {
+  color: black;
+  font-size: 0.9rem;
+}
+
