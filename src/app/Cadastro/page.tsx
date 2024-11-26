@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import { ApiURL } from "../config";
 import { setCookie } from 'nookies';
 import Usuario from '../interface/usuario';
-import Styles from '../css/cadastro.module.css';
+import styles from '../css/cadastro.module.css';
 
 interface ResponseSignin{
   erro: boolean,
@@ -75,53 +75,55 @@ export default function Cadastro() {
         setUsuario(
           (usuarioAnterior) => ({
             ...usuarioAnterior,
-            email: novaPassword
+            password: novaPassword
           })
         );
       }
 
   return (
-    <div className="cadastroContainer">
-      <h1 className="cadastroTitle">Cadastro</h1>
-      <form onSubmit={handleSubmit} className="cadastroForm">
-        <div className="formGroup">
+    <div className={styles.cadastroContainer}>
+      <h1 className={styles.cadastroTitle}>Cadastro</h1>
+      <form onSubmit={handleSubmit} className={styles.cadastroForm}>
+        <div className={styles.formGroup}>
           <label htmlFor="nome">Nome:</label>
           <input
             type="text"
             id="nome"
             value={usuario.nome}
             onChange={(e) => alterarNome(e.target.value)}
-            className="formInput"
+            className={styles.formInput}
             required
           />
         </div>
-        <div className="formGroup">
+        <div className={styles.formGroup}>
           <label htmlFor="email">E-mail:</label>
           <input
             type="email"
             id="email"
             value={usuario.email}
             onChange={(e) => alterarEmail(e.target.value)}
-            className="formInput"
+            className={styles.formInput}
             required
           />
         </div>
-        <div className="formGroup">
+        <div className={styles.formGroup}>
           <label htmlFor="password">Senha:</label>
           <input
             type="password"
             id="password"
             value={usuario.password}
             onChange={(e) => alterarPassword(e.target.value)}
-            className="formInput"
+            className={styles.formInput}
             required
           />
         </div>
-        <button type="submit" className="submitButton">Cadastrar</button>
-        {error && <p className="errorMessage">{error}</p>}
+        <button type="submit" className={styles.submitButton}>
+          Cadastrar
+        </button>
+        {error && <p className={styles.errorMessage}>{error}</p>}
       </form>
-      <p className="loginPrompt">
-        Já possui conta? <a href="/Login" className="loginLink">Login</a>
+      <p className={styles.loginPrompt}>
+        Já possui conta? <a href="/Login" className={styles.loginLink}>Login</a>
       </p>
     </div>
   );

@@ -9,7 +9,7 @@ export default function Home(){
 const router = useRouter();
   useEffect(() => {
   const {'reserva-token': token} = parseCookies()
-    if (token){
+    if (!token){
       router.push('/Login')
     }
 }, []);
@@ -145,7 +145,7 @@ const router = useRouter();
           <p className={styles.text}>Endereço: Rua Doce, 123</p>
         </section>
       </main>
-      
+
       <footer className={styles.footer}>
         <p className={styles.footerText}>
           © 2024 Confeitaria Vieira. Todos os direitos reservados.

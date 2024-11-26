@@ -28,7 +28,7 @@ export default function Login(){
     }
 }, []);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     try{
       const response = await fetch(`${ApiURL}/auth/login`, {
@@ -61,7 +61,7 @@ export default function Login(){
 
   return (
     <div className={styles.loginContainer}>
-    <h1 className={styles.loginTitle}>Bem-vindo à Confeitaria!</h1>
+    <h1 className={styles.loginTitle}>Bem-vindo à Confeitaria Vieira!</h1>
     <form onSubmit={handleSubmit} className={styles.loginForm}>
       <div className={styles.formGroup}>
         <label htmlFor="email">E-mail:</label>
