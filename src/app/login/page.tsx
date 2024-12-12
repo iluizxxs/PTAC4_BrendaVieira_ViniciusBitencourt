@@ -1,6 +1,9 @@
-'use client'
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+"use client"
+import { FormEvent, useEffect, useState } from "react";
+import { useRounter } from "next/navigation";
+import { ApiURL } from "../config";
+import 
+
 
 
 export default function Login(){
@@ -8,6 +11,10 @@ export default function Login(){
   const [senha, setSenha] = useState('');
   const [error, setError] = useState('');
   const router = useRouter();
+
+  useEffect(() => {
+
+  })
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
