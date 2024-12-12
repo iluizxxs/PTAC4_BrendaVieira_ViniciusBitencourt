@@ -1,0 +1,89 @@
+
+.loginContainer {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff8f0;
+    border-radius: 15px;
+    border: 1px solid #f2d7d0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .loginTitle {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff6d85;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  .loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .formGroup {
+    text-align: left;
+  }
+  
+  /* Rótulos */
+  .formGroup label {
+    font-size: 14px;
+    color: #ff6d85;
+  }
+  
+  .formInput {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ffedf0;
+    border-radius: 5px;
+    background-color: #ffedf0;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .formInput:focus {
+    border-color: #ff6d85;
+    outline: none;
+  }
+  
+  .submitButton {
+    padding: 12px;
+    background-color: #ff6d85;
+    color: #ffedf0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submitButton:hover {
+    background-color: #a46050;
+  }
+  
+  /* Mensagem de erro */
+  .errorMessage {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  /* Link para cadastro */
+  .signupLink {
+    display: block;
+    margin-top: 20px;
+    color: #ff6d85;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .signupLink:hover {
+    color: #a46050;
+  }
+  

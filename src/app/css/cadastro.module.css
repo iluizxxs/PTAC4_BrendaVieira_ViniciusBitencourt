@@ -1,0 +1,95 @@
+
+.cadastroContainer {
+    max-width: 450px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff8f0; 
+    border-radius: 15px;
+    border: 1px solid #ff6d85;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .cadastroTitle {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff6d85; 
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  .cadastroForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .formGroup {
+    text-align: left;
+  }
+  
+  .formGroup label {
+    font-size: 14px;
+    color: #ff6d85;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .formInput {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ffedf0;
+    border-radius: 8px;
+    background-color: #ffedf0;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .formInput:focus {
+    border-color: #ff6d85;
+    outline: none;
+  }
+  
+  /* Botão de envio */
+  .submitButton {
+    padding: 12px;
+    background-color: #ff6d85;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submitButton:hover {
+    background-color: #ff6d85;
+  }
+  
+  /* Mensagem de erro */
+  .errorMessage {
+    color: red;
+    font-size: 14px;
+    margin-top: -10px;
+    font-weight: bold;
+  }
+  
+  /* Estilo do texto para o link de login */
+  .loginPrompt {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .loginLink {
+    color: #ff6d85;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .loginLink:hover {
+    color: #a46050;
+  }
+  
