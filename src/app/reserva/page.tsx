@@ -12,7 +12,7 @@ export default async function Reserva() {
 
     const reservas = await fecthReserva()
     console.log(reservas)
-    if (!user || !reservas) redirect('/Login')
+    if (!user) redirect('/Login')
 
     return (
         <div>
