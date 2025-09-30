@@ -11,9 +11,9 @@ const Perfil = () => {
     //}, []);
 
    // {
-       // nome: 'Brenda Vieira',
-       // idade: 20,
-       // email: 'brenda@gmail.com'
+       // nome: 'Luiz Carlos',
+       // idade: 19,
+       // email: ''
   //  }
 
     return(
